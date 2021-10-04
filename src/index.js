@@ -73,7 +73,7 @@ app.route(["/game/:id", "/games/:id"])
     const game = games.find(game => game.id == id);
 
     if (!game) {
-      res.status(4004).json({
+      res.status(404).json({
         error: "Game not found."
       });
     }
